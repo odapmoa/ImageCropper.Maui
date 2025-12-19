@@ -52,6 +52,10 @@ namespace ImageCropper.Maui
                 UIApplication.SharedApplication.KeyWindow.RootViewController.DismissViewController(true, null);
             };
 
+            // Fix for iOS Safe Area issue: Set ModalPresentationStyle to FullScreen
+            // This ensures bottom toolbar buttons are not obscured by the home indicator on iPhone X and later
+            cropViewController.ModalPresentationStyle = UIModalPresentationStyle.FullScreen;
+
             UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(cropViewController, true, null);
 
             if(imageCropper.PageTitle != null && imageCropper.PageTitle.Length > 0)
