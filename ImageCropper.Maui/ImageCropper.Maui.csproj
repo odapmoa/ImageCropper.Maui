@@ -12,7 +12,7 @@
         <PackageTags>maui;image cropping;image cropper;xamarin;cropper;cropping;image;photo;rotate;safe-area</PackageTags>
         <Description>.NET MAUI plugin to crop and rotate photos. Includes iOS Safe Area fix for bottom toolbar buttons.</Description>
         <RepositoryUrl>https://github.com/odapmoa/ImageCropper.Maui</RepositoryUrl>
-        <Version>1.2.4</Version>
+        <Version>1.2.5</Version>
         <PackageId>ImageCropper.Maui.SafeArea</PackageId>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.0</SupportedOSPlatformVersion>
