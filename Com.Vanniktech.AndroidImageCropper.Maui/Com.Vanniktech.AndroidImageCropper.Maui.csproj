@@ -1,17 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0-android</TargetFramework>
-    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+    <TargetFrameworks>net10.0-android</TargetFrameworks>
+    <SupportedOSPlatformVersion>24</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <AssemblyVersion>4.6.0</AssemblyVersion>
+    <AssemblyVersion>4.6.0.1</AssemblyVersion>
     <FileVersion>$(AssemblyVersion)</FileVersion>
     <Version>$(AssemblyVersion)</Version>
-    <Title>Com.Vanniktech.AndroidImageCropper</Title>
-    <RepositoryUrl>https://github.com/jbowmanp1107/ImageCropper.Maui</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/jbowmanp1107/ImageCropper.Maui</PackageProjectUrl>
-    <Description>.NET MAUI and Xamarin Android Bindings for Com.Vanniktech.AndroidImageCropper</Description>
+    <Title>Com.Vanniktech.AndroidImageCropper.SafeArea</Title>
+    <PackageId>Com.Vanniktech.AndroidImageCropper.Maui.SafeArea</PackageId>
+    <RepositoryUrl>https://github.com/odapmoa/ImageCropper.Maui</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/odapmoa/ImageCropper.Maui</PackageProjectUrl>
+    <Description>.NET MAUI and Xamarin Android Bindings for Com.Vanniktech.AndroidImageCropper with net9.0 and net10.0 support</Description>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
   <ItemGroup>
