@@ -52,19 +52,12 @@ namespace ImageCropper.Maui
                 UIApplication.SharedApplication.KeyWindow.RootViewController.DismissViewController(true, null);
             };
 
-            // Fix for iOS Safe Area issue:
-            // 1. Set ModalPresentationStyle to FullScreen to avoid page sheet modal style
-            cropViewController.ModalPresentationStyle = UIModalPresentationStyle.FullScreen;
+            // Fix for iOS Safe Area issue on devices with home indicator (iPhone X and later):
+            // Move toolbar to top position to avoid home indicator area completely
+            cropViewController.ToolbarPosition = TOCropViewControllerToolbarPosition.Top;
 
-            // 2. Add additional safe area insets to move toolbar above home indicator
-            // Get the bottom safe area inset from the key window
-            var window = UIApplication.SharedApplication.KeyWindow;
-            var bottomInset = window?.SafeAreaInsets.Bottom ?? 0;
-            if (bottomInset > 0)
-            {
-                // Add extra padding to ensure toolbar buttons are above the home indicator
-                cropViewController.AdditionalSafeAreaInsets = new UIEdgeInsets(0, 0, bottomInset, 0);
-            }
+            // Set ModalPresentationStyle to FullScreen
+            cropViewController.ModalPresentationStyle = UIModalPresentationStyle.FullScreen;
 
             UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(cropViewController, true, null);
 
